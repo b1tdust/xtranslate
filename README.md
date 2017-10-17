@@ -1,6 +1,8 @@
 # xTranslate
 
-this is just a very simple hackeable python script that translates selected text (or from clipboard) and show the result as a notification. It works using **xsel**, [translate-shell](https://github.com/soimort/translate-shell) and **libnotify**
+this is just a very simple hackeable python script that translates selected text (or from clipboard) and show the result as a notification. It works using **xsel**, [translate-shell](https://github.com/soimort/translate-shell) and **libnotify**. 
+
+### tested on arch linux x64 with gnome-shell 3.26.1
 
 ## dependencies
 * translate-shell
