@@ -22,6 +22,7 @@ set up a trigger: I use a keyboard short cut to trigger the script
 
 * translate any selected text or text from the clipboard. please take in account the limitations of translate-shell. 
 * open in browser: opens **translate.google.com**. The url arguments are source and destination language and the text to translate. If source is empty (**:es**) it sends **auto** param for autodetection mode. see google translate query docs for customizations
+* language support: see [translate-shell](https://github.com/soimort/translate-shell)
 
 ## screenshots
 
