@@ -20,6 +20,8 @@ set up a trigger: I use a keyboard short cut to trigger the script
 * `-t --timeout`: notification timeout in milliseconds. default `5000`
 * `-p --params`: **translate-shell** coma separated additional params. default `b` (brief translation)
 
+example: xtranslate -p "b,sp" // brief translate and **speak** input
+
 ## features
 
 * translate any selected text or text from the clipboard. please take in account the limitations of translate-shell. 
