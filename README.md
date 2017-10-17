@@ -11,7 +11,7 @@ this is just a very simple hackeable python script that translates selected text
 place the script and **gt_icon** wherever you want and add executable permissions.
 set up a trigger: I use a keyboard short cut to trigger the script
 
-![shortcut](../blob/master/imgs/shortcut.png?raw=true)
+![shortcut](imgs/shortcut.png)
 
 * `-h`: display help
 * `-tr, --translate`: format **lang_src:lang_dest**. default `en:es`. see [translate-shell](https://github.com/soimort/translate-shell) for more info
@@ -25,9 +25,9 @@ set up a trigger: I use a keyboard short cut to trigger the script
 
 ## screenshots
 
-![shortcut](../blob/master/imgs/demo1.png?raw=true)
+![demo1](imgs/demo1.png)
 
-![shortcut](../blob/master/imgs/demo2.png?raw=true)
+![demo2](imgs/demo2.png)
 
 
 ## TODO
