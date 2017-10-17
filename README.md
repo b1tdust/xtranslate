@@ -8,7 +8,7 @@ this is just a very simple hackeable python script that translates selected text
 * xsel
 
 ## usage
-place the script and **gt_icon** wherever you want and add executable permissions.
+place the script and **gt_icon** wherever you want and add execute permission.
 set up a trigger: I use a keyboard short cut to trigger the script
 
 ![shortcut](imgs/shortcut.png)
@@ -21,7 +21,7 @@ set up a trigger: I use a keyboard short cut to trigger the script
 ## features
 
 * translate any selected text or text from the clipboard. please take in account the limitations of translate-shell. 
-* open in browser: opens **translate.google.com** in default browser. The url arguments are source and destination language. If source is empty (like **:es**) it sends **auto** param for autodetection mode. see google translate query docs for customizations
+* open in browser: opens **translate.google.com**. The url arguments are source and destination language and the text to translate. If source is empty (**:es**) it sends **auto** param for autodetection mode. see google translate query docs for customizations
 
 ## screenshots
 
