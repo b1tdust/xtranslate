@@ -44,6 +44,10 @@ def close():
 
 
 def main():
+	text = get_text()
+	if not text:
+		return 
+
 	parser = argparse.ArgumentParser(description='xtranslate - show translations as notifications using translate shell')
 	parser.add_argument('-tr', '--translate',
 											help='Translate source and destination language. e.g es:en; :es (for auto detection)',
@@ -61,20 +65,13 @@ def main():
 		params = args.params.split(',')
 		config['params'] = ["-{}".format(x) for x in params]
 
-	cmd = ['trans'] + config['params'] + [config['translate']]
-	text = get_text()
-	if not text:
-		return 
-	
+	cmd = ['trans'] + config['params'] + [config['translate']]	
 	cmd.append(text)
-	p = subprocess.Popen(cmd, stdout=subprocess.PIPE)
-	# for line in p.stdout:
-	# 		
-	# 		break
+	p = subprocess.Popen(cmd, stdout=subprocess.PIPE, universal_newlines=True)
 	p.wait()
-	translated = p.stdout.read().decode('utf-8')
-	dir = os.path.dirname(__file__)
-	image = GdkPixbuf.Pixbuf.new_from_file(os.path.join(dir, "gt_icon.png"))
+	translated = p.stdout.read()
+	dir = os.path.dirname(__file__)	
+	image = GdkPixbuf.Pixbuf.new_from_file(os.path.join(dir, "gt_icon.png")) 
 	Notify.init("xTranslate")
 	notification = Notify.Notification.new("xtranslate", translated)
 	notification.set_icon_from_pixbuf(image)
@@ -82,7 +79,7 @@ def main():
 	notification.set_timeout(config['timeout'])
 	notification.add_action('clicked', 'open in browser', open_gtranslate, text)
 	notification.show()
-	GLib.timeout_add_seconds(config['timeout'] / 1000 + 1, close)
+	GLib.timeout_add_seconds(config['timeout'] / 1000 + 1, close) # wait timeout + 1 second before exit
 	
 
 if __name__ == "__main__":
