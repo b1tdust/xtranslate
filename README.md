@@ -38,7 +38,13 @@ again, see translate-shell docs to get more info to play with.
 
 ![demo2](imgs/demo2.png)
 
+##	testing/debug?
+just do `python xtranslate.py` or open the file in some IDE like pycharm, vs code with python debugger.
+
 
 ## TODO
 - [ ] support for other translators availables in **translate-shell**
 - [ ] make arch linux package
+- [ ] handle errors and limitations
+
+
