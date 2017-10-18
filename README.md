@@ -20,13 +20,17 @@ set up a trigger: I use a keyboard short cut to trigger the script
 * `-t --timeout`: notification timeout in milliseconds. default `5000`
 * `-p --params`: **translate-shell** coma separated additional params. default `b` (brief translation)
 
-example: xtranslate -p "b,sp" // brief translate and **speak** input
+examples: 
+* `xtranslate -p "b,sp" // brief translate and **speak** the input text`
+* `xtranslate -tr ":es" // auto detect source language and translate to spanish"`
+
+again, see translate-shell docs to get more info to play with. 
 
 ## features
 
+* language support: see [translate-shell](https://github.com/soimort/translate-shell)
 * translate any selected text or text from the clipboard. please take in account the limitations of translate-shell. 
 * open in browser: opens **translate.google.com**. The url arguments are source and destination language and the text to translate. If source is empty (**:es**) it sends **auto** param for autodetection mode. see google translate query docs for customizations
-* language support: see [translate-shell](https://github.com/soimort/translate-shell)
 
 ## screenshots
 
